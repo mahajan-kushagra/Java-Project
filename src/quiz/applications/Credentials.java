@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 public class Credentials {
     private static String path = "C:/Users/Public/Documents";
@@ -16,7 +17,8 @@ public class Credentials {
                 System.out.println(
                         "A new (empty) file used (in future) to contain user IDs and their respective passwords has been created.");
             else
-                System.out.println("Unable to create file to contain user IDs and their respective passwords. Possibly the file already exists in the system");
+                System.out.println(
+                        "Unable to create file to contain user IDs and their respective passwords. Possibly the file already exists in the system");
         } catch (IOException ioEx) {
             System.out.println("IOException occured while creating data file. Stack trace: ");
             ioEx.printStackTrace();
@@ -41,6 +43,7 @@ public class Credentials {
                     reader.nextLine();
                     reader.nextLine();
                 }
+            } catch (NoSuchElementException nseEx) {
             } finally {
                 reader.close();
             }
@@ -77,6 +80,7 @@ public class Credentials {
                     reader.nextLine();
                     reader.nextLine();
                 }
+            } catch(NoSuchElementException nseEx) {
                 throw new UserDoesNotExistsException();
             } finally {
                 reader.close();
