@@ -80,8 +80,9 @@ public class Credentials {
                     reader.nextLine();
                     reader.nextLine();
                 }
-            } catch(NoSuchElementException nseEx) {
                 throw new UserDoesNotExistsException();
+            } catch(NoSuchElementException nseEx) {
+                System.out.println("NoSuchElementException");
             } finally {
                 reader.close();
             }
