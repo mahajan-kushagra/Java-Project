@@ -42,11 +42,11 @@ public class Quiz extends JFrame implements ActionListener {
         question.setFont(new Font("Tahoma", Font.PLAIN, 24));
         add(question);
 
-        questions[0][0] = "Which is used to find and fix bugs in the Java programs.?";
-        questions[0][1] = "JVM";
-        questions[0][2] = "JDB";
-        questions[0][3] = "JDK";
-        questions[0][4] = "JRE";
+        questions[0][0] = "Which one of the following is not a Java feature?";
+        questions[0][1] = "Object-oriented";
+        questions[0][2] = "Use of pointers";
+        questions[0][3] = "Portable";
+        questions[0][4] = "Dynamic and Extensible";
 
         questions[1][0] = "What is the return type of the hashCode() method in the Object class?";
         questions[1][1] = "int";
@@ -54,11 +54,11 @@ public class Quiz extends JFrame implements ActionListener {
         questions[1][3] = "long";
         questions[1][4] = "void";
 
-        questions[2][0] = "Which package contains the Random class?";
-        questions[2][1] = "java.util package";
-        questions[2][2] = "java.lang package";
-        questions[2][3] = "java.awt package";
-        questions[2][4] = "java.io package";
+        questions[2][0] = "What is not the use of “this” keyword in Java?";
+        questions[2][1] = "Referring to the instance variable when a local variable has the same name";
+        questions[2][2] = "Passing itself to the method of the same class";
+        questions[2][3] = "Passing itself to another method";
+        questions[2][4] = "Calling another constructor in constructor chaining";
 
         questions[3][0] = "An interface with no fields or methods is known as?";
         questions[3][1] = "Runnable Interface";
@@ -78,11 +78,11 @@ public class Quiz extends JFrame implements ActionListener {
         questions[5][3] = "Readable interface";
         questions[5][4] = "Result interface";
 
-        questions[6][0] = "Which keyword is used for accessing the features of a package?";
-        questions[6][1] = "import";
-        questions[6][2] = "package";
-        questions[6][3] = "extends";
-        questions[6][4] = "export";
+        questions[6][0] = "Which of the following is a superclass of every class in Java?";
+        questions[6][1] = "ArrayList";
+        questions[6][2] = "Abstract class";
+        questions[6][3] = "Object class";
+        questions[6][4] = "String";
 
         questions[7][0] = "In java, jar stands for?";
         questions[7][1] = "Java Archive Runner";
@@ -102,13 +102,13 @@ public class Quiz extends JFrame implements ActionListener {
         questions[9][3] = "Use of exception handling";
         questions[9][4] = "Dynamic binding between objects";
 
-        answers[0][1] = "JDB";
+        answers[0][1] = "Use of pointers";
         answers[1][1] = "int";
-        answers[2][1] = "java.util package";
+        answers[2][1] = "Passing itself to the method of the same class";
         answers[3][1] = "Marker Interface";
         answers[4][1] = "Heap memory";
         answers[5][1] = "Remote interface";
-        answers[6][1] = "import";
+        answers[6][1] = "Object class";
         answers[7][1] = "Java Archive";
         answers[8][1] = "java.lang.StringBuilder";
         answers[9][1] = "Bytecode is executed by JVM";
@@ -190,8 +190,7 @@ public class Quiz extends JFrame implements ActionListener {
             if (groupOptions.getSelection() == null) {
                 useranswers[count][0] = "";
             } else {
-                useranswers[count][0] = groupOptions.getSelection().getActionCommand();// getactioncommand peforms the
-                                                                                       // action
+                useranswers[count][0] = groupOptions.getSelection().getActionCommand();// getactioncommand peforms the action
             }
             for (int i = 0; i < useranswers.length; i++) {
                 if (useranswers[i][0].equals(answers[i][1]))// string comparison the actual answer ans the answer that user has marked.
